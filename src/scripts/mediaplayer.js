@@ -1,4 +1,8 @@
+//MediaPlayer class and objects
+import toggleSvgs from "./script.js";
+
 function MediaPlayer(config){
+
     this.media = config.el;
     this.plugins = config.plugins || [];  
     
@@ -25,6 +29,7 @@ MediaPlayer.prototype.togglePlay = function () {
     } else {
         this.pause();
     }
+    toggleSvgs();
 };
 
 MediaPlayer.prototype.mute = function() {
@@ -34,6 +39,15 @@ MediaPlayer.prototype.mute = function() {
 
 MediaPlayer.prototype.unmute = function() {
     this.media.muted = false;
+}
+
+MediaPlayer.prototype.toggleMute = function () {
+    if(this.media.muted){
+        this.unmute();
+    }else {
+        this.mute();
+    }
+    toggleSvgs();
 }
 
 export default MediaPlayer;
