@@ -76,6 +76,8 @@ body {
 }
 
 .page-footer {
+    background-color: #00406c;
+    color: white;
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -85,10 +87,10 @@ body {
 
 .page-footer a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .page-footer p {
     font-size: 12px;
-    margin-bottom: 0;
+    margin-bottom: 4px;
 }

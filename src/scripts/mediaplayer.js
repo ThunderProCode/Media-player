@@ -9,10 +9,10 @@ function MediaPlayer(config){
     this._initPlugins();
 };
 
-MediaPlayer.prototype._initPlugins = function () {
-    this.plugins.forEach(plugin => {
-        plugin.run(this);
-    })
+MediaPlayer.prototype._initPlugins = function() {
+  this.plugins.forEach(plugin => {
+    plugin.run(this);
+  });
 };
 
 MediaPlayer.prototype.play = function () {
