@@ -3,10 +3,9 @@
 function AutoPlay() {}
 
 AutoPlay.prototype.run = function(player) {
-   if(!player.muted){
-    player.muted(true);
+   if(player.media.muted){
+      player.play();
    }
-   player.play();
 };
 
 export default AutoPlay;

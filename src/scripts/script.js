@@ -1,6 +1,8 @@
 
 import MediaPlayer from './mediaplayer.js';
 import AutoPlay from '../plugins/AutoPlay.js';
+import AutoPause from '../plugins/AutoPause.js';
+
 
 //Get Elements from HTML
 const video = document.querySelector('video');
@@ -17,7 +19,8 @@ unmuteSvg.style.display = 'none';
 
 //New instance of MediaPlayer
 const player = new  MediaPlayer({ el: video, plugins: [
-    // new AutoPlay()
+    new AutoPlay(),
+    new AutoPause()
 ]});
 
 function toggleSvgs (){
